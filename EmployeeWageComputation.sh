@@ -1,3 +1,13 @@
+
 #! /bin/bash -x
 
-echo "Welcome to shell scripting"
+isPresent=1
+isAbsent=2
+randomCheck=$(( $RANDOM%2 ))
+
+if [ $isPresent -eq $randomCheck ]
+then
+	echo "Employee is present"
+else
+	echo"Employee is absent"
+fi
