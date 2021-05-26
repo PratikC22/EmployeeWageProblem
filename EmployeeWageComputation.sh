@@ -2,11 +2,14 @@
 
 isPresent=1
 isAbsent=2
-randomCheck=$(( $RANDOM%2 ))
+empCheck=$(( $RANDOM%2 ))
+wagePerHr=20
+hrsPerDay=8
 
-if [ $isPresent -eq $randomCheck ]
+if [ $isPresent -eq $empCheck ]
 then
-	echo "Employee is present"
+	DailyWage=$(( $hrsPerDay * wagePerHr ))
+	echo "Daily wage is $DailyWage"
 else
-	echo"Employee is absent"
+	echo "Employee is absent"
 fi
